@@ -18,7 +18,15 @@ suma_hasta(N, S):-
     N >= 1,
     N1 is N - 1,
     suma_hasta(N1, S1),
-    S is S1 + N.
+    
+%Potencia
+potencia(_, 0, 1).
 
+potencia(X, Y, Z):-
+    Y > 0,
+    Y1 is Y - 1,
+    potencia(X, Y1, Z1),
+    Z is X * Z1.
     
-    
+
+
