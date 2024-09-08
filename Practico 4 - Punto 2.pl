@@ -36,24 +36,24 @@
          salario_categoria(4, 2001, 3000).
          salario_categoria(5, 3001, 9999).
          
-%Mostrar nombres de empleados del departamento de investigación.
+%Mostrar nombres de empleados del departamento de investigaciÃ³n.
 emp_invest(N) :-
     departamento(Nro_departamento, 'investigacion', _),
     empleado(_, N, _, _, _, _, Nro_departamento).
 
-%Mostrar los empleados que cobran menos de lo que indica su categoría.
+%Mostrar los empleados que cobran menos de lo que indica su categorÃ­a.
 paga_menos(N) :-
     empleado(_, N, _, _, Sueldo, Categoria, _),
     salario_categoria(Categoria,  Sal_min, Sal_max),
     Sueldo < Sal_min.
 
-%Mostrar los empleados que cobran más de lo que indica su categoría.
+%Mostrar los empleados que cobran mÃ¡s de lo que indica su categorÃ­a.
 paga_mas(N) :-
     empleado(_, N, _, _, Sueldo, Categoria, _),
     salario_categoria(Categoria,  Sal_min, Sal_max),
     Sueldo > Sal_max.
 
-%Mostrar los empleados que cobran distinto de lo que indica su categoría.
+%Mostrar los empleados que cobran distinto de lo que indica su categorÃ­a.
 paga_distinto(N) :-
     empleado(_, N, _, _, Sueldo, Categoria, _),
     salario_categoria(Categoria, Sal_min, Sal_max),
